@@ -9,21 +9,130 @@ body{
     width: 10%;
 }
 
+#time{
+    margin:5%;
+}
+
+.checkbox-label .checkbox-custom{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 24px;
+    width: 24px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid #FFFFFF;
+}
+
+.checkbox-label .checkbox-custom::after{
+    position: absolute;
+    content: "";
+    left:12px;
+    top: 12px;
+    height: 0px;
+    width: 0px;
+    border-radius: 5px;
+    border: solid #C4012F;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(0deg) scale(0);
+    -ms-transform: rotate(0deg) scale(0);
+    transform: rotate(0deg) scale(0);
+    opacity: 1;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom{
+    background-color:#FFFFFF;
+    border-radius: 5px;
+    -webkit-transform: rotate(0deg) scale(1);
+    -ms-transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+    border: 2px solid #FFFFFF;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom::after{
+    -webkit-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+    opacity: 1;
+    left: 8px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: 2px solid #C4012F;
+    border-width: 0 2px 2px 0;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.checkbox-label .checkbox-custom::before{
+    position: absolute;
+    content: "";
+    left: 10px;
+    top: 10px;
+    width: 0px;
+    height: 0px;
+    border-radius: 5px;
+    border: 2px solid #FFFFFF;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+}
+
+.checkbox-label input:checked ~ .checkbox-custom::before{
+    left: -3px;
+    top: -3px;
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    -webkit-transform: scale(3);
+    -ms-transform: scale(3);
+    transform: scale(3);
+    opacity: 0;
+    z-index: 999;
+    transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+
+}
+
+.fsSubmitButton
+{
+padding: 10px 20px 11px !important;
+background-color: #C4012F;
+font-weight: bold;
+font-family: 'Lobster', cursive; 
+text-shadow: 1px 1px black;
+color: #ffffff;
+border-radius: 100px;
+-moz-border-radius: 100px;
+-webkit-border-radius: 100px;
+border: 1px solid #C4012F;
+cursor: pointer;
+box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+margin: 15%;
+}
+
 .grid-item {
-  background-color: #FFF;
-  border: 1px solid #FFF;
-  padding: 10px;
-  margin:3px;
-  font-size: 30px;
-  font-family: 'Lobster', cursive; 
-  text-align: center;
-  border-radius: 10px;
+    background-color: #C4012F;
+    border: 1px solid white;
+    padding: 10px;
+    margin:3px;
+    font-size: 30px;
+    color: white;
+    font-family: 'Lobster', cursive; 
+    text-align: center;
+    border-radius: 10px;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 50% 50%;
-  background-color: #C4012F;
+  grid-template-columns: 33% 33% 33%;
+  background-color: white;
   border-radius: 10px;
   margin-top:50px;
 }
@@ -50,7 +159,7 @@ body{
 
 #switchboygirl{
     position: relative;
-    margin: -25px auto;
+    margin: -5% auto;
 }
 
 .boygirl{
@@ -126,8 +235,8 @@ input::placeholder {
   content: "";
   height: 3vw;
   width: 3vw;
-  left: 4px;
-  bottom: 4px;
+  left: .5vw;
+  bottom: .5vw;
   background-color: white;
   -webkit-transition: .2s;
   transition: .2s;
