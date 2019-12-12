@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="jquery-3.4.1.min.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
 <link rel= 'stylesheet' href= 'shower.css'>
@@ -25,6 +27,12 @@
             <input type="checkbox">
             <span class="checkbox-custom"></span>
         </label>
+        <select>
+            <option value="5min">5 minutes</option>
+            <option value="10min">10 minutes</option>
+            <option value="15min">15 minutes</option>
+            <option value="30min">30 minutes</option>
+        </select>
         <div id="sumbitB" class="fsSubmitButton" style="font-size:5vw;">Submit</div>
         <div class="grid-container">
             <div class="grid-item" style="font-size:3vw;">Current Boy User</div>
@@ -34,7 +42,28 @@
             <div class="grid-item" style="font-size:3vw;" placeholder='None'>1</div>
             <div class="grid-item" style="font-size:3vw;">2</div>
         </div>
+        <div class="drop">
+  <div class="option active placeholder" data-value="placeholder">
+    Choose wisely
+  </div>
+  <div class="option" data-value="wow">
+    Wow!
+  </div>
+  <div class="option" data-value="drop">
+    So dropdown!
+  </div>
+  <div class="option" data-value="select">
+    Very select!
+  </div>
+  <div class="option" data-value="custom">
+    Much custom!
+  </div>
+  <div class="option" data-value="animation"> 
+    Such animation!
+  </div>
+</div>
     </div>
+</div>
 </body>
 <script src='shower.js'></script>
 </html>
