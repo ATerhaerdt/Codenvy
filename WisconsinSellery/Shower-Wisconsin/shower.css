@@ -74,13 +74,18 @@ body{
 
 .checkbox-label .checkbox-custom{
     position: absolute;
-    top: 53vw;
-    left: 10vw;
-    height: 3vw;
-    width: 3vw;
+    top: 55vw;
+    left: 7vw;
+    height: 24px;
+    width: 24px;
     background-color: transparent;
     border-radius: 5px;
     border: 2px solid #FFFFFF;
+    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
 }
 
 .checkbox-label .checkbox-custom::after{
@@ -97,6 +102,11 @@ body{
     -ms-transform: rotate(0deg) scale(0);
     transform: rotate(0deg) scale(0);
     opacity: 1;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
 }
 
 .checkbox-label input:checked ~ .checkbox-custom{
@@ -114,30 +124,14 @@ body{
     -ms-transform: rotate(45deg) scale(1);
     transform: rotate(45deg) scale(1);
     opacity: 1;
-    left: .8vw;
-    top: .2vw; 
-    width: 1vw;
-    height: 2vw;
-    border: 2px solid #C4012F;
+    left: 8px;
+    top: 3px; 
+    width: 6px;
+    height: 12px;
+    border: solid #C4012F;
     border-width: 0 2px 2px 0;
     background-color: transparent;
     border-radius: 0;
-}
-
-.checkboxlabel .checkbox-custom{
-    transition: all 0.3s ease-out;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-}
-
-.checkboxlabel .checkbox-custom::after{
-     transition: all 0.3s ease-out;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
 }
 
 .fsSubmitButton
