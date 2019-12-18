@@ -9,74 +9,75 @@ body{
     width: 10%;
 }
 
-.select {
-  font-size: 16px;
-  position: relative;
-  display: inline-block;
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
- .select select {
+.box select {
+  background-color: #C4012F;
+  color: white;
+  padding: 12px;
+  width: 250px;
+  border-radius: 10px;
+  border-color:white;
+  border-width: 2px;
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
   outline: none;
-  -webkit-appearance: none;
-  display: block;
-  padding: 1.2em 3em 1.3em 1.5em;
-  margin: 0;
-
-  transition: border-color 0.2s;
-  border: 5px solid #C4012F;
-  border-radius: 5px;
-
-  background: #fff;
-  color: #555;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
 }
 
-.select .arr {
-  background: #fff;
-  bottom: 5px;
+.box::before {
+  content: "\f13a";
+  font-family: 'Lobster', cursive;
   position: absolute;
-  right: 5px;
-  top: 5px;
-  width: 50px;
-  height: 20px;
+  top: 0;
+  right: 0;
+  border-radius:10px;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 45px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
   pointer-events: none;
-}
-.select .arr:before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 24px;
-  margin-top: -5px;
-  pointer-events: none;
-  border-top: 10px solid #C4012F;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
 }
 
-.select .arr:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 28px;
-  margin-top: -5px;
-  pointer-events: none;
-  border-top: 6px solid #fff;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
+.box:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.box select option {
+  padding: 30px;
 }
 
 #time{
     margin:5%;
 }
 
+.twoC{
+    top: 5vw;
+}
+
+.checkbox-label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
 .checkbox-label .checkbox-custom{
     position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 24px;
-    width: 24px;
+    top: 53vw;
+    left: 10vw;
+    height: 3vw;
+    width: 3vw;
     background-color: transparent;
     border-radius: 5px;
     border: 2px solid #FFFFFF;
@@ -113,47 +114,30 @@ body{
     -ms-transform: rotate(45deg) scale(1);
     transform: rotate(45deg) scale(1);
     opacity: 1;
-    left: 8px;
-    top: 3px;
-    width: 6px;
-    height: 12px;
+    left: .8vw;
+    top: .2vw; 
+    width: 1vw;
+    height: 2vw;
     border: 2px solid #C4012F;
     border-width: 0 2px 2px 0;
     background-color: transparent;
     border-radius: 0;
 }
 
-.checkbox-label .checkbox-custom::before{
-    position: absolute;
-    content: "";
-    left: 10px;
-    top: 10px;
-    width: 0px;
-    height: 0px;
-    border-radius: 5px;
-    border: 2px solid #FFFFFF;
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
+.checkboxlabel .checkbox-custom{
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
 }
 
-.checkbox-label input:checked ~ .checkbox-custom::before{
-    left: -3px;
-    top: -3px;
-    width: 24px;
-    height: 24px;
-    border-radius: 5px;
-    -webkit-transform: scale(3);
-    -ms-transform: scale(3);
-    transform: scale(3);
-    opacity: 0;
-    z-index: 999;
-    transition: all .5 ease-out;
-    -webkit-transition: all .5s ease-out;
-    -moz-transition: all .5s ease-out;
-    -ms-transition: all .5s ease-out;
-    -o-transition: all .5s ease-out;
-
+.checkboxlabel .checkbox-custom::after{
+     transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
 }
 
 .fsSubmitButton
@@ -217,24 +201,27 @@ margin: 15%;
 
 #switchboygirl{
     position: relative;
-    margin: -5% auto;
+    margin: 5% auto;
 }
 
 .boygirl{
     display: inline;
 }
 
-
+#timeExpected{
+    margin: 5%;
+}
 
 .name{
     font-family: 'Lobster', cursive;
     color: white;
-    padding : 10px;
-    margin  : 5px auto;
-    background : #C4012F;
-    border-radius: 10%;
+    font-size: 3vw;
+    padding: 10px;
+    width: 30vw;
+    margin : 5px auto;
+    background: #C4012F;
     border: white solid 2px;
-    display : block;
+    display: block;
 }
 
 
