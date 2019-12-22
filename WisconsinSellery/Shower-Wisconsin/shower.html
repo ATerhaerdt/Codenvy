@@ -13,17 +13,16 @@
 </head>
     <div id="sidebar1">
         <div class="sidebar">
-            <a href="#home"><i class="fas fa-home"></i> Home</a>
-            <a href="#info"><i class="fas fa-address-card"></i>Info</a>
-            <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+            <div id = "home1"><a href="#home"><i class="fas fa-home"></i> Home</a></div>
+            <div id = "info1"><a href="#info"><i class="fas fa-address-card"></i>Info</a></div>
+            <div id = "contact1"><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></div>
         </div>
     </div>
     <div id='logWrapper'>
         <img src="WisconsinShower.png" id="background" alt="" class="center">
         <div id='mainText' style="font-size:8vw;" class = 'Text'>Sellery Shower</div>
         <div id="signIn">
-            <div class="g-signin2 googleMargin" data-onsuccess="onSignIn"></div>
-            <div id="s1" class="sAnimation">Wisconsin Sellery</div>
+
         </div>
         <div id="register">
             <div id ="welcomeRegister" class='Text' style="font-size:5vw;">Welcome...</div>
@@ -40,18 +39,30 @@
             </div>
             <div id="timeE">
                 <div id="timeExpected" class='Text' style="font-size:4vw;">How Long Does Your Shower Usually Take?</div>
-                <div id="allCheckBoxes">
-                    <label class="checkbox-label">
-                        <input type="checkbox">
-                        <span class="checkbox-custom"></span>
+                <div id="radioButton">
+                    <label class="container Text ">One Minute
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
                     </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox">
-                        <span class="checkbox-custom"></span>
-                        <div id="1 Minute" class="Text" style="font-size:3vw;">1 Minute</div>
+                    <label class="container Text">Five Minutes
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container Text">Ten Minutes
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container Text">Fifteeen Minutes
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container Text">Twenty Minutes
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
                     </label>
                 </div>
             </div>
+        <div id="sumbitB" class="fsSubmitButton" style="font-size:5vw;">Submit</div>
         </div>
         <div id="forNow">
             <div id="time" class='Text' style="font-size:4vw;">Expected Time</div>
@@ -66,7 +77,6 @@
                     <option>I'm Going To Be A While</option>
                 </select>
             </div>
-            <div id="sumbitB" class="fsSubmitButton" style="font-size:5vw;">Submit</div>
             <div class="grid-container">
                 <div class="grid-item" style="font-size:3vw;">Current Boy User</div>
                 <div class="grid-item" style="font-size:3vw;" placeholder='None'>1</div>

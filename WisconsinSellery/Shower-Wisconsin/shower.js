@@ -8,17 +8,32 @@ function onSignIn(googleUser) {
 }
 
 var other = $("#forNow");
-var a = $("#register");
-var b = $("sidebar1");
+var a = $("#signIn");
+var registry = $("#register")
 
 hideElements(other);
 hideElements(a);
+
 
 
 function hideElements(element){
     $(element).hide();
 }
 
+function showElements(element){
+    $(element).show();
+}
 
+
+$("#home1").click(function(){
+  showElements(registry);
+});
+
+$("#info1").click(function(){
+  hideElements(registry);
+});
+
+
+//<div class="g-signin2 googleMargin" data-onsuccess="onSignIn"></div>
 // CLIENT ID: 261775333656-a251ptequpk7g8b25rmkr32tet8b3cf3.apps.googleusercontent.com
 // CLIENT SECRET: 6VuN14UjP9Ry3UxG5Y-sxxiW
