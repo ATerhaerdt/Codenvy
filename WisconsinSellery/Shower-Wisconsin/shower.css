@@ -9,6 +9,43 @@ body{
     width: 10%;
 }
 
+.sidebar {
+  height: 100%;
+  width: 78px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+  transition: background-color .5s;
+  color: white;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #C4012F;
+  background-color: white;
+}
+
+.main {
+  margin-left: 78px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
 .box {
   position: absolute;
   top: 50%;
@@ -62,8 +99,8 @@ body{
     margin:5%;
 }
 
-.twoC{
-    top: 5vw;
+.allCheckbox{
+    top: 10vw;
 }
 
 .checkbox-label input {
@@ -184,6 +221,12 @@ margin: 15%;
     position: absolute;
 }
 
+.sAnimation{
+    font-family: 'Lobster', cursive;
+    color:#d3d3d3;
+    font-size:25px;
+}
+
 #logWrapper{
     width: 50%;
     position: absolute;
@@ -200,6 +243,10 @@ margin: 15%;
 
 .boygirl{
     display: inline;
+}
+
+.googleMargin{
+    margin:5% 25%;
 }
 
 #timeExpected{

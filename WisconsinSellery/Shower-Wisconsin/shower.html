@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content=261775333656-a251ptequpk7g8b25rmkr32tet8b3cf3.apps.googleusercontent.com>
 <script src="jquery-3.4.1.min.js"></script>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://kit.fontawesome.com/f5406f8a6e.js" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
 <link rel= 'stylesheet' href= 'shower.css'>
     <title>Wisconsin Shower Sellery</title>
 </head>
-<body>
+    <div id="sidebar1">
+        <div class="sidebar">
+            <a href="#home"><i class="fas fa-home"></i> Home</a>
+            <a href="#info"><i class="fas fa-address-card"></i>Info</a>
+            <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+        </div>
+    </div>
     <div id='logWrapper'>
         <img src="WisconsinShower.png" id="background" alt="" class="center">
         <div id='mainText' style="font-size:8vw;" class = 'Text'>Sellery Shower</div>
         <div id="signIn">
-
+            <div class="g-signin2 googleMargin" data-onsuccess="onSignIn"></div>
+            <div id="s1" class="sAnimation">Wisconsin Sellery</div>
         </div>
         <div id="register">
-            <div id="fname" class='name' style="font-size:5vw;">Julia</div>
-            <div id="lname" class= 'name' style="font-size:3vw;">Terhaerdt</div>
+            <div id ="welcomeRegister" class='Text' style="font-size:5vw;">Welcome...</div>
+            <div id="fname" class='name allCheckBoxes' style="font-size:5vw;">Julia</div>
+            <div id="lname" class= 'name allCheckBoxes' style="font-size:3vw;">Terhaerdt</div>
             <div id='switchboygirl'>
+                <div id="areYou" class='Text' style="font-size:4vw;">What are you?</div>
                 <div id='boy' class='Text boygirl' style="font-size:3vw;">Boy</div>
                 <label class="switch">
                     <input type="checkbox">
@@ -65,9 +77,8 @@
             </div>
             <div class="drop"></div>
         </div>
-</div>
+        </div>
     </div>
-</div>
 </body>
 <script src='shower.js'></script>
 </html>
