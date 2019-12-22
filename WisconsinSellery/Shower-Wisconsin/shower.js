@@ -10,9 +10,11 @@ function onSignIn(googleUser) {
 var other = $("#forNow");
 var a = $("#signIn");
 var registry = $("#register")
+var contact = $("#contact")
 
 hideElements(other);
 hideElements(a);
+hideElements(contact);
 
 
 
@@ -26,13 +28,18 @@ function showElements(element){
 
 
 $("#home1").click(function(){
-  showElements(registry);
+    showElements(registry);
+    hideElements(contact);
 });
 
 $("#info1").click(function(){
-  hideElements(registry);
+    hideElements(registry);
 });
 
+$("#contact").click(function(){
+    hideElements(registry);
+    showElements(contact);
+});
 
 //<div class="g-signin2 googleMargin" data-onsuccess="onSignIn"></div>
 // CLIENT ID: 261775333656-a251ptequpk7g8b25rmkr32tet8b3cf3.apps.googleusercontent.com

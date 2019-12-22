@@ -384,7 +384,8 @@ input:checked + .slider:before {
 
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-  background-color: #ccc;
+  transition: background-color .4s;
+  background-color: #C4012F;
 }
 
 /* When the radio button is checked, add a blue background */
