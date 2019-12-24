@@ -9,6 +9,14 @@ body{
     width: 10%;
 }
 
+.campusPic{
+    max-width: 100%;
+    height:20%;
+    opacity: 1.2;
+    -webkit-filter: grayscale(25%); 
+      filter: grayscale(25%);
+}
+
 .sidebar {
   height: 100%;
   width: 78px;
