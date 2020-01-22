@@ -1,25 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-<meta name="google-signin-client_id" content=261775333656-a251ptequpk7g8b25rmkr32tet8b3cf3.apps.googleusercontent.com>
 <script src="jquery-3.4.1.min.js"></script>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
 <script src="https://kit.fontawesome.com/f5406f8a6e.js" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
 <link rel= 'stylesheet' href= 'shower.css'>
     <title>Wisconsin Shower Sellery</title>
 </head>
-    <div class="loader">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-        <div class="bar4"></div>
-        <div class="bar5"></div>
-        <div class="bar6"></div>
-    </div>
-    <div id ="load">
+    <div id ="main">
         <img src="Madison.jpg" class= "campusPic" alt="campusP" width=100% height=20%>
         <div id="sidebar1">
             <div class="sidebar">
@@ -30,11 +19,12 @@
         </div>
         <div id='logWrapper'>
             <img src="WisconsinShower.png" id="background" alt="" class="center">
-            <div id='mainText' style="font-size:8vw;" class = 'Text'>Sellery Shower</div>
-            <div id="signIn">
-
+            <div id='mainText' style="font-size:8vw;" class='Text'>Sellery Shower</div>
+            <div id="welcomePage">
+                <div id="welcomeText" class="Text" style="font-size:8vw;" >Hello!</div>
+                <div id="welcomeText" class="Text" style="font-size:5vw;" >Sign in with Google</div>
             </div>
-            <div id="register">
+            <div id="registerPage">
                 <div id ="welcomeRegister" class='Text' style="font-size:5vw;">Welcome...</div>
                 <div id="fname" class='name allCheckBoxes' style="font-size:5vw;">Julia</div>
                 <div id="lname" class= 'name allCheckBoxes' style="font-size:3vw;">Terhaerdt</div>
@@ -72,12 +62,12 @@
                         </label>
                     </div>
                 </div>
-            <div id="sumbitB" class="fsSubmitButton" style="font-size:5vw;">Submit</div>
+            <button id="sumbitB" button class="fsSubmitButton" style="font-size:5vw;">Submit</div>
             </div>
             <div id="forNow">
                 <div id="time" class='Text' style="font-size:4vw;">Expected Time</div>
                 
-                <div class="box">
+                <div class="box" style="font-size:4vw;">
                     <select>
                         <option>1 Minute</option>
                         <option>5 Minutes</option>
