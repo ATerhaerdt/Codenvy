@@ -3,13 +3,11 @@ var a = $("#signIn");
 var registry = $("#registerPage")
 var contact = $("#contact")
 var welcome = $("#welcomePage");
+var info = $("#info");
 var buttonsEnabled = true;
 
-hideElements(other);
-hideElements(a);
-hideElements(contact);
-hideElements(welcome);
-
+var pages = [welcome, registry, contact, other];
+var currentPage = [];
 startUp();
 
 function startUp(){
@@ -17,6 +15,7 @@ function startUp(){
     $(registry).hide();
     $(contact).hide();
     $(welcome).show();
+    $(info).hide();
 }
 
 function hideElements(element){
@@ -32,30 +31,30 @@ $("#home1").click(function(){
     showElements(registry);
     hideElements(contact);
     hideElements(other);
+    hideElements(welcome);
+    hideElements(info);
 });
 
 $("#info1").click(function(){
-    transition($("#info1"));
+    transition($("#info"));
+        showElements(info);
         hideElements(contact);
         hideElements(registry);
-        showElements(other);
+        hideElements(welcome);
+        hideElements(other);
 });
 
-function transition(btn){
-    
-    console.log(buttonsEnabled);
+function transition(page){
     if(buttonsEnabled){
         buttonsEnabled = false;
         setTimeout(function() {
             buttonsEnabled = true;
-            console.log(buttonsEnabled);
-        }, 3000);  
-        $("#bar1").animate({height:"100%"},2000).delay(100).animate({height:0},2000);
-        $("#bar2").delay(200).animate({height:"100%"},2000).delay(100).animate({height:0},2000);
-        $("#bar3").delay(400).animate({height:"100%"},2000).delay(100).animate({height:0},2000);
-        $("#bar4").delay(600).animate({height:"100%"},2000).delay(100).animate({height:0},2000);
+        }, 3000);
+        $("#bar1").animate({height:"100%"},1500).delay(100).animate({height:0},2000);
+        $("#bar2").delay(200).animate({height:"100%"},1500).delay(100).animate({height:0},2000);
+        $("#bar3").delay(400).animate({height:"100%"},1500).delay(100).animate({height:0},2000);
+        $("#bar4").delay(600).animate({height:"100%"},1500).delay(100).animate({height:0},2000);
     }
-    
 }
 
 $("#sumbitB").click(function(){
